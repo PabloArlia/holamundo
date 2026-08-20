@@ -1,3 +1,9 @@
+import os
+
+# Evita corrupción gráfica de WebKitGTK en algunas Raspberry Pi.
+# Debe configurarse antes de importar pywebview.
+os.environ.setdefault("WEBKIT_DISABLE_COMPOSITING_MODE", "1")
+
 import webview
 
 
